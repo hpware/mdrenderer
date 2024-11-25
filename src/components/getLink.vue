@@ -1,12 +1,12 @@
 <script setup lang="ts">
-import { ref, onMounted } from 'vue';
+import { ref } from 'vue';
 
 const form = ref({ url: '' });
 const host = new URL(location.href).host;
 const url = ref();
 
 function getLink() {
-    if (!form.value.url.includes("https://") || !form..value.url.includes("http://")) {
+    if (!form.value.url.includes("https://") || !form.value.url.includes("http://")) {
         alert("請輸入https 或 http 開頭的連結");
         return;
     }

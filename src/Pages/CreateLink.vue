@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import getLink from '../components/getLink.vue';
+import GetLink from '../components/getLink.vue';
 </script>
 <template>
-    <getLink />
+    <GetLink />
 </template>

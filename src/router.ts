@@ -1,5 +1,4 @@
 import { createMemoryHistory, createRouter } from 'vue-router';
-import About from './Pages/About.vue';
 import p404 from './components/404.vue';
 import Main from './Pages/Main.vue';
 import CreateLink from './Pages/CreateLink.vue';
