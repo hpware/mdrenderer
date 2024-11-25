@@ -1,16 +1,16 @@
 <script setup lang="ts">
-import { ref } from 'vue';
+import { ref, onMounted } from 'vue';
 
 const form = ref({ url: '' });
 const host = new URL(location.href).host;
 const url = ref();
 
 function getLink() {
-    if (!form.value.url.includes("https://") || !form.value.url.includes("http://")) {
+    if (!form.value.url.startsWith("https://") && !form.value.url.startsWith("http://")) {
         alert("請輸入https 或 http 開頭的連結");
         return;
     }
-    url.value = "https://" + host + "/?u=" + form.value.url;
+    url.value = host + "/?u=" + form.value.url;
     navigator.clipboard.writeText(url.value);
     alert("連結已複製到剪貼簿");
 }
