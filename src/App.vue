@@ -3,7 +3,6 @@ import Nav from './components/Nav.vue'
 </script>
 
 <template>
-  <Nav/>
   <main>
     <RouterView />
   </main>

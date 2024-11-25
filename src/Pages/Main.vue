@@ -32,6 +32,7 @@ onMounted(() => {
     <div v-if="displayError1">
         <h1>錯誤</h1>
         <h3>{{ displayError }}</h3>
+        <h3>關於此系統: <a href="https://mdviewer.yuanhau.com/?u=https://mdviewer.yuanhau.com/mds/about.md">連結</a></h3>
         <GetLink />
     </div>
     <div v-else>
