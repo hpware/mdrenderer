@@ -23,7 +23,6 @@ async function getFile() {
         displayError1.value = true
     }
 }
-
 onMounted(() => {
         getFile();
 })
