@@ -7,7 +7,7 @@ import CreateLink from './Pages/CreateLink.vue';
 const routes = [
   { path: '/', component: Main },
   { path: '/index', component: Main },
-  { path: '/about', component: About },
+  { path: '/about', redirect: '/?u=https://mdviewer.yuanhau.com/mds/about.md' },
   { path: '/createlink', component: CreateLink },
   { path: '/:pathMatch(.*)*', component: p404},
 
