@@ -81,7 +81,7 @@ onMounted(() => {
             </div>
         </div>
         <div v-else style="color:#a4e2ff">
-            URL: <span>{{ host }}</span>
+            <span>URL: {{ host }}</span>
         </div>
         <div v-html="md"></div>
     </div>
