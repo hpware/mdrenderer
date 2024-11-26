@@ -62,9 +62,6 @@ onMounted(() => {
         getFile();
 })
 
-const mgqcki = () => {
-    popup.value.show()
-}
 </script>
 
 <template>
