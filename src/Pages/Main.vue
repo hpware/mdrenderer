@@ -39,6 +39,7 @@ onMounted(() => {
         <h1>錯誤</h1>
         <h3>{{ displayError }}</h3>
         <h3>關於此系統: <a href="https://mdviewer.yuanhau.com/?u=https://mdviewer.yuanhau.com/mds/about.md">連結</a></h3>
+        <h3>如何創立連結: <a href="https://mdviewer.yuanhau.com/?u=https://pub-4a2940c7ae814b14901247f772d85856.r2.dev/%E5%A6%82%E4%BD%95%E4%B8%8A%E5%82%B3%E6%AA%94%E6%A1%88.md">連結</a></h3>
         <GetLink />
     </div>
     <div v-else>
