@@ -11,7 +11,6 @@ const host = new URLSearchParams(location.search).get('u');
 const loading = ref(true);
 const verifieddoamin = ref(false);
 
-// Define allowed domains
 const VerifiedDomains = [
     'https://mdviewer.yuanhau.com/',
     'https://pub-4a2940c7ae814b14901247f772d85856.r2.dev/',
@@ -73,7 +72,9 @@ onMounted(() => {
     </div>
     <div v-else>
         <div v-if="verifieddoamin">
-            這個貼文是來自開發者的來源&nbsp;<i class="bi bi-check-circle-fill" style="color:#4efe63"></i>
+            這個貼文是來自開發者的來源 <i class="bi bi-check-circle-fill" style="color:#4efe63"></i>
+            <br/>
+            <span style="color:#4efe63">{{ host }}</span>
         </div>
         <div v-html="md"></div>
     </div>
