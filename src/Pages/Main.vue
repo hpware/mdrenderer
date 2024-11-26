@@ -55,7 +55,9 @@ async function getFile() {
         displayError.value = `Error: ${e}`
         displayError1.value = true
     } finally {
-        loading.value = false
+        setTimeout(() => {
+            loading.value = false
+        }, 2050)
     }
 }
 onMounted(() => {

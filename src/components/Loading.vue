@@ -8,6 +8,7 @@ onMounted(() => {
 });
 </script>
 <template>
+  <h2>mdViewer</h2>
   <div class="center">
     <!--Loading Animation-->
     <ul>
@@ -49,13 +50,11 @@ ul {
 }
 
 li {
-  width: 50px;
-  height: 50px;
+  width: 25px;
+  height: 25px;
   border-radius: 50px;
   display: block;
-  background-color: transparent;
-  background-image: url("https://utfs.io/f/CCLPSN5W2HD5ziRBkeSZ5pJYf32lWLvIK8uGb41xkHCUnXm7");
-  background-repeat: no-repeat;
+  background-color: rgb(148, 212, 255);
   background-size: 200px 100px;
   opacity: 0;
   flex: 0 0 30px;
