@@ -74,11 +74,14 @@ onMounted(() => {
         <GetLink />
     </div>
     <div v-else>
-        <div v-if="verifieddoamin">
-            <span>這個貼文是來自開發者的來源 <i class="bi bi-check-circle-fill" style="color:#4efe63" @click="displayURL = !displayURL"></i></span>
+        <div v-if="verifieddoamin" style="color:#a4e2ff">
+            <span>檔案來自開發者擁有的來源 <i class="bi bi-check-circle-fill" style="color:#4efe63" @click="displayURL = !displayURL"></i></span>
             <div class="popup" v-if="displayURL">
                     <span>{{ host }}</span>
             </div>
+        </div>
+        <div v-else style="color:#a4e2ff">
+            URL: <span>{{ host }}</span>
         </div>
         <div v-html="md"></div>
     </div>
