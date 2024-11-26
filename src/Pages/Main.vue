@@ -20,6 +20,18 @@ async function getFile() {
     try {
         const response = await fetch(host)
         const text = await response.text()
+        if (!text) {
+            displayError1.value = true
+            displayError.value = '檔案無法讀取'
+            loading.value = false
+            return
+        } else if (text.includes('Error 404 Object not found'))
+        {
+            displayError1.value = true
+            displayError.value = '檔案不存在'
+            loading.value = false
+            return
+        }
         md.value = marked.parse(text)
     } catch (e) {
         displayError.value = `Error: ${e}`
