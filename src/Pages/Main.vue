@@ -9,7 +9,24 @@ const displayError = ref();
 const displayError1 = ref(false);
 const host = new URLSearchParams(location.search).get('u');
 const loading = ref(true);
+const verifieddoamin = ref(false);
 
+// Define allowed domains
+const VerifiedDomains = [
+    'https://mdviewer.yuanhau.com/',
+    'https://pub-4a2940c7ae814b14901247f772d85856.r2.dev/',
+    'https://0nas.yuanhau.com/~hw/',
+    'https://yuanh.xyz/',
+    'https://zz.yuanhau.com/',
+    'https://yuanhau.com/',
+    'https://assets.yuanhau.com/'
+];
+
+const isVerified = host && VerifiedDomains.some(domain => host.startsWith(domain));
+
+if (isVerified) {
+    verifieddoamin.value = true;
+}
 async function getFile() {
     if (!host) {
         displayError1.value = true
@@ -55,6 +72,9 @@ onMounted(() => {
         <GetLink />
     </div>
     <div v-else>
+        <div v-if="verifieddoamin">
+            這個貼文是來自開發者的來源&nbsp;<i class="bi bi-check-circle-fill" style="color:#4efe63"></i>
+        </div>
         <div v-html="md"></div>
     </div>
     </div>

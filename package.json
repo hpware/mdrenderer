@@ -9,6 +9,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "bootstrap-icons": "^1.11.3",
     "dompurify": "^3.2.1",
     "marked": "^15.0.2",
     "motion": "^11.11.17",
