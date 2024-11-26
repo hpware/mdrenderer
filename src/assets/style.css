@@ -73,3 +73,9 @@ ol {
   list-style-type: decimal;
   unicode-bidi: isolate;
 }
+
+@media only screen and (max-width: 414px) {
+  body {
+    min-height:90vh;
+  }
+}
