@@ -10,6 +10,7 @@ const displayError1 = ref(false);
 const host = new URLSearchParams(location.search).get('u');
 const loading = ref(true);
 const verifieddoamin = ref(false);
+const displayURL = ref(false);
 
 const VerifiedDomains = [
     'https://mdviewer.yuanhau.com/',
@@ -60,6 +61,10 @@ async function getFile() {
 onMounted(() => {
         getFile();
 })
+
+const mgqcki = () => {
+    popup.value.show()
+}
 </script>
 
 <template>
@@ -73,9 +78,10 @@ onMounted(() => {
     </div>
     <div v-else>
         <div v-if="verifieddoamin">
-            這個貼文是來自開發者的來源 <i class="bi bi-check-circle-fill" style="color:#4efe63"></i>
-            <br/>
-            <span style="color:#4efe63">{{ host }}</span>
+            <span>這個貼文是來自開發者的來源 <i class="bi bi-check-circle-fill" style="color:#4efe63" @click="displayURL = !displayURL"></i></span>
+            <div class="popup" v-if="displayURL">
+                    <span>{{ host }}</span>
+            </div>
         </div>
         <div v-html="md"></div>
     </div>
@@ -84,3 +90,9 @@ onMounted(() => {
         <Loading />
     </div>
 </template>
+<style scoped>
+.popup {
+    transition: opacity 1s ease-in-out;
+    color: #4efe63;
+}
+</style>
