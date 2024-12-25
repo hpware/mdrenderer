@@ -21,7 +21,10 @@ const VerifiedDomains = [
     'https://yuanhau.com/',
     'https://assets.yuanhau.com/',
     'https://raw.githubusercontent.com/hpware/',
-    'https://blogge.yuanh.xyz'
+    'https://raw.githubusercontent.com/hpwarebot/',
+    'https://blogge.yuanh.xyz',
+    'https://cdn.jsdelivr.net/gh/hpware/',
+    'https://cdn.jsdelivr.net/gh/hpwarebot/',
 ];
 
 const isVerified = host && VerifiedDomains.some(domain => host.startsWith(domain));
